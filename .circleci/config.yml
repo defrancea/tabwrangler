@@ -9,6 +9,7 @@ jobs:
       - checkout
       - node/install:
           install-yarn: true
+      - run: yarn install
       - run: yarn build
   lint:
     docker:
@@ -17,6 +18,7 @@ jobs:
       - checkout
       - node/install:
           install-yarn: true
+      - run: yarn install
       - run: yarn lint
 workflows:
   lint_and_build:
